@@ -27,11 +27,12 @@ import os
 #   Col('img', 'Images with Detections', detection_images),     # specify image content for column 3
 # ]
 
-cols = [
+cols_all = [
   # Col('id1', 'ID'),                                               # make a column of 1-based indice
   # Col('img', 'Images with TP/FP', 'full/vis_gt/*.png'),             # specify image content for column 2
   Col('img', 'CHAIR', 'vis_top_detections/chair/*'),
   Col('img', 'BED', 'vis_top_detections/bed/*'),
+#  Col('img', 'BED ONLY FALSE POSITIVES', 'vis_top_detections_bed_fp_only/bed/*'),
   Col('img', 'TOILET', 'vis_top_detections/toilet/*'),
   Col('img', 'TV', 'vis_top_detections/tv/*'),
   Col('img', 'COUCH', 'vis_top_detections/couch/*'),
@@ -39,5 +40,41 @@ cols = [
   #Col('img', 'Images with Detections', detection_images),     # specify image content for column 3
 ]
 
+cols_chair = [
+  Col('img', 'CHAIR', 'vis_top_detections/chair/*'),
+]
+
+cols_bed = [
+  Col('img', 'BED', 'vis_top_detections/bed/*'),
+]
+
+cols_toilet = [
+  Col('img', 'TOILET', 'vis_top_detections/toilet/*'),
+]
+
+cols_tv = [
+  Col('img', 'TV', 'vis_top_detections/tv/*'),
+]
+
+cols_couch = [
+  Col('img', 'COUCH', 'vis_top_detections/couch/*'),
+]
+
+cols_pottedplant = [
+  Col('img', 'POTTED PLANT', 'vis_top_detections/potted_plant/*'),
+]
+
 # html table generation
-imagetable(cols, imscale=0.6)
+imagetable(cols_all, imscale=0.6)
+
+imagetable(cols_chair, 'chair.html')
+
+imagetable(cols_bed, 'bed.html')
+
+imagetable(cols_toilet, 'toilet.html')
+
+imagetable(cols_tv, 'tv.html')
+
+imagetable(cols_couch, 'couch.html')
+
+imagetable(cols_pottedplant, 'potted_plant.html')

@@ -31,8 +31,13 @@ cols = [
   # Col('id1', 'ID'),                                               # make a column of 1-based indice
   # Col('img', 'Images with TP/FP', 'full/vis_gt/*.png'),             # specify image content for column 2
   Col('img', 'CHAIR', 'vis_top_detections/chair/*'),
+  Col('img', 'BED', 'vis_top_detections/bed/*'),
+  Col('img', 'TOILET', 'vis_top_detections/toilet/*'),
+  Col('img', 'TV', 'vis_top_detections/tv/*'),
+  Col('img', 'COUCH', 'vis_top_detections/couch/*'),
+  Col('img', 'POTTED PLANT', 'vis_top_detections/potted_plant/*'),
   #Col('img', 'Images with Detections', detection_images),     # specify image content for column 3
 ]
 
 # html table generation
-imagetable(cols)
+imagetable(cols, imscale=0.5)

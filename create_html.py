@@ -40,4 +40,4 @@ cols = [
 ]
 
 # html table generation
-imagetable(cols, imscale=0.5)
+imagetable(cols, imscale=0.6)
